@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block titulo %}
+    Cadastro de Fornecedores
+{% endblock titulo %}
+
+{% block conteudo %}
+<br/>
+<form method="post">{% csrf_token %}
+    {% bootstrap_form form %}
+    <button type="submit" class="btn btn-primary">
+        Salvar
+    </button>
+</form>
+
+{% endblock %}
